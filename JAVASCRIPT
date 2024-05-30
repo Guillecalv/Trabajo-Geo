@@ -1,0 +1,84 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const countries = [
+        { name: 'Belgium', capital: 'Brussels' },
+        { name: 'Bulgaria', capital: 'Sofia' },
+        { name: 'Czech Republic', capital: 'Prague' },
+        { name: 'Denmark', capital: 'Copenhagen' },
+        { name: 'Germany', capital: 'Berlin' },
+        { name: 'Estonia', capital: 'Tallinn' },
+        { name: 'Ireland', capital: 'Dublin' },
+        { name: 'Greece', capital: 'Athens' },
+        { name: 'Spain', capital: 'Madrid' },
+        { name: 'France', capital: 'Paris' },
+        { name: 'Italy', capital: 'Rome' },
+        { name: 'Latvia', capital: 'Riga' },
+        { name: 'Lithuania', capital: 'Vilnius' },
+        { name: 'Luxembourg', capital: 'Luxembourg City' },
+        { name: 'Hungary', capital: 'Budapest' },
+        { name: 'Malta', capital: 'Valletta' },
+        { name: 'Netherlands', capital: 'Amsterdam' },
+        { name: 'Austria', capital: 'Vienna' },
+        { name: 'Poland', capital: 'Warsaw' },
+        { name: 'Portugal', capital: 'Lisbon' },
+        { name: 'Romania', capital: 'Bucharest' },
+        { name: 'Slovenia', capital: 'Ljubljana' },
+        { name: 'Slovakia', capital: 'Bratislava' },
+        { name: 'Finland', capital: 'Helsinki' },
+        { name: 'Sweden', capital: 'Stockholm' },
+        { name: 'Croatia', capital: 'Zagreb' },
+        { name: 'Cyprus', capital: 'Nicosia' }
+    ];
+
+    const newsItems = [
+        { title: 'EU Summit 2024', content: 'The EU leaders meet to discuss future policies and reforms.' },
+        { title: 'Green Deal', content: 'New environmental policies are being implemented across the EU.' },
+        { title: 'Brexit Impact', content: 'Analyzing the effects of Brexit on EU member states.' }
+    ];
+
+    const galleryImages = [
+        'https://humanidades.com/wp-content/uploads/2017/02/union-europea-e1561670170942.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/c/c8/European_Council_%2838185339475%29.jpg',
+        'https://www.metalocus.es/sites/default/files/styles/mopis_news_gallery_deskop/public/metalocus_sede_union_europea_bruselas_samyn_and_partners_01.jpg?itok=HtuyBxJM',
+        'https://spanish-presidency.consilium.europa.eu/media/isknetqk/espa%C3%B1a-asume-la-presidencia-del-consejo-de-la-uni%C3%B3n-europea-el-1-de-julio.jpg',
+        'https://www.consilium.europa.eu/media/64775/thumbs_thumb-related-content.png',
+        'https://spanish-presidency.consilium.europa.eu/media/3plem4fq/quinta-presidencia-europea.jpg?width=2080&height=1170&rnd=133325962379130000'
+    ];
+
+    const countriesList = document.getElementById('countries-list');
+    const newsCarousel = document.getElementById('news-carousel');
+    const galleryGrid = document.getElementById('gallery-grid');
+
+    countries.forEach(country => {
+        const countryItem = document.createElement('div');
+        countryItem.className = 'country-item';
+        countryItem.innerHTML = `<h3>${country.name}</h3><p>Capital: ${country.capital}</p>`;
+        countryItem.addEventListener('click', () => {
+            alert(`You clicked on ${country.name}`);
+        });
+        countriesList.appendChild(countryItem);
+    });
+
+    newsItems.forEach(news => {
+        const newsItem = document.createElement('div');
+        newsItem.className = 'news-item';
+        newsItem.innerHTML = `<h3>${news.title}</h3><p>${news.content}</p>`;
+        newsCarousel.appendChild(newsItem);
+    });
+
+    galleryImages.forEach(src => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = `<img src="${src}" alt="Gallery Image">`;
+        galleryGrid.appendChild(galleryItem);
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        alert(`Thank you for your message, ${name}! We will respond to ${email} soon.`);
+        contactForm.reset();
+    });
+});
