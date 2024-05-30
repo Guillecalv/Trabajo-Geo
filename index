@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Union</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>European Union</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#countries">Countries</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to the European Union</h2>
+        <p>The European Union is a political and economic union of 27 member states that are located primarily in Europe.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About the EU</h2>
+        <p>The European Union (EU) is a political and economic union of 27 member states that are located primarily in Europe. The EU has developed an internal single market through a standardized system of laws that apply in all member states in those matters, and only those matters, where members have agreed to act as one.</p>
+        <p>The EU operates through a system of supranational independent institutions and intergovernmental negotiated decisions by the member states. Institutions of the EU include the European Commission, the Council of the European Union, the European Council, the Court of Justice of the European Union, the European Central Bank, and the European Parliament.</p>
+    </section>
+
+    <section id="activities">
+        <h2>Areas of Activity</h2>
+        <ul>
+            <li>Economic Policy: The EU develops economic policies that support sustainable growth and stability across member states.</li>
+            <li>Trade Agreements: The EU negotiates trade agreements with countries and regions around the world to promote economic cooperation and reduce barriers to trade.</li>
+            <li>Environmental Protection: The EU implements policies to protect the environment, combat climate change, and promote sustainable development.</li>
+            <li>Consumer Rights: The EU protects the rights of consumers through regulations and directives that ensure high standards of product safety and fair trading practices.</li>
+            <li>Human Rights: The EU promotes and protects human rights, democracy, and the rule of law both within its borders and globally.</li>
+            <li>Education and Culture: The EU supports educational programs and cultural initiatives that promote learning, creativity, and cultural exchange among its citizens.</li>
+            <li>Research and Innovation: The EU invests in research and innovation to drive scientific advancements and technological progress.</li>
+            <li>Security and Defense: The EU collaborates on security and defense policies to enhance the safety and security of its member states.</li>
+        </ul>
+    </section>
+    
+    <section id="countries">
+        <h2>Member Countries</h2>
+        <div class="countries-list" id="countries-list">
+            <!-- Interactive list of countries will be loaded here -->
+        </div>
+    </section>
+    
+    <section id="news">
+        <h2>Latest News</h2>
+        <div class="news-carousel" id="news-carousel">
+            <!-- News items will be loaded here -->
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Gallery images will be loaded here -->
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>What is the European Union?</h3>
+                <p>The European Union (EU) is a political and economic union of 27 member states that are located primarily in Europe.</p>
+            </div>
+            <div class="faq-item">
+                <h3>When was the EU founded?</h3>
+                <p>The European Union was founded on November 1, 1993.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are the main institutions of the EU?</h3>
+                <p>The main institutions of the EU include the European Commission, the Council of the European Union, the European Council, the Court of Justice of the European Union, the European Central Bank, and the European Parliament.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 European Union Information Portal</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
